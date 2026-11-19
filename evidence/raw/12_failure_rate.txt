@@ -1,0 +1,8 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> python scripts\analyze_run_history.py
+=== HISTORICAL PIPELINE HEALTH ===
+Total runs             : 5
+Failed runs            : 1
+Failure rate           : 20.00%
+Average successful duration: 497.5 seconds
+Average data latency   : 8.8 minutes
+Maximum data latency   : 11.0 minutes

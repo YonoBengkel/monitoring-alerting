@@ -1,0 +1,36 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Get-ChildItem data\output
+
+
+    Directory: D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum\data\output
+
+
+Mode                 LastWriteTime         Length Name                                                                                                                                                                                                    
+----                 -------------         ------ ----                                                                                                                                                                                                    
+-a----        11/19/2026   8:47 AM            130 sales_summary.json                                                                                                                                                                                      
+-a----        11/19/2026   8:47 AM           1352 transactions_clean.csv
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Get-Content data\output\sales_summary.json
+{
+  "loaded_at_utc": "2026-11-19T01:47:04.100679+00:00",
+  "record_count": 12,
+  "total_revenue": 7450000.0,
+  "currency": "IDR"
+}
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Get-Content data\metrics\latest_metrics.json
+{
+  "dag_id": "etl_monitoring_demo",
+  "run_id": "manual__2026-11-19T01:46:59.642689+00:00",
+  "measured_at_utc": "2026-11-19T01:47:05.244687+00:00",
+  "execution_duration_seconds": 3.84,
+  "duration_threshold_seconds": 900,
+  "average_data_latency_seconds": 635.0,
+  "max_data_latency_seconds": 1080.0,
+  "latency_threshold_seconds": 600,
+  "records_processed": 12,
+  "duration_alert": false,
+  "latency_alert": true,
+  "note": "Latency uses sample expected_available_at and actual_available_at fields."
+}
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Get-Content data\output\transactions_clean.csv -TotalCount 3
+transaction_id,customer_id,product,quantity,unit_price,event_time,expected_available_at,actual_available_at,revenue
+TRX-1001,C-001,Keyboard,2,175000,2026-11-15T07:42:00,2026-11-15T08:00:00,2026-11-15T08:07:00,350000.00
+TRX-1002,C-002,Mouse,1,85000,2026-11-15T07:45:00,2026-11-15T08:00:00,2026-11-15T08:09:00,85000.00

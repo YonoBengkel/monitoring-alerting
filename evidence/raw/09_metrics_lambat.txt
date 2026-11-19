@@ -1,0 +1,15 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Get-Content data\metrics\latest_metrics.json
+{
+  "dag_id": "etl_monitoring_demo",
+  "run_id": "manual__2026-11-19T01:49:30.702938+00:00",
+  "measured_at_utc": "2026-11-19T01:49:54.857148+00:00",
+  "execution_duration_seconds": 23.24,
+  "duration_threshold_seconds": 900,
+  "average_data_latency_seconds": 635.0,
+  "max_data_latency_seconds": 1080.0,
+  "latency_threshold_seconds": 600,
+  "records_processed": 12,
+  "duration_alert": false,
+  "latency_alert": true,
+  "note": "Latency uses sample expected_available_at and actual_available_at fields."
+}

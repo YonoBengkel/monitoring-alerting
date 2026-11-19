@@ -1,0 +1,111 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> docker compose build
+ Image pipeline_monitoring_practicum-airflow-scheduler Building 
+ Image pipeline_monitoring_practicum-airflow-init Building 
+ Image pipeline_monitoring_practicum-airflow-webserver Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.91kB done
+#1 DONE 0.0s
+
+#2 [airflow-init internal] load build definition from Dockerfile
+#2 transferring dockerfile: 169B 0.0s done
+#2 DONE 0.1s
+
+#3 [airflow-init internal] load metadata for docker.io/apache/airflow:2.10.5-python3.11
+#3 DONE 0.1s
+
+#4 [airflow-scheduler internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [airflow-webserver internal] load build context
+#5 DONE 0.0s
+
+#6 [airflow-webserver 1/3] FROM docker.io/apache/airflow:2.10.5-python3.11@sha256:b16e19f925ae0dcabaa2271b37212891ed68bf74e26c2db61f46dddd7d502937
+#6 resolve docker.io/apache/airflow:2.10.5-python3.11@sha256:b16e19f925ae0dcabaa2271b37212891ed68bf74e26c2db61f46dddd7d502937 0.0s done
+#6 resolve docker.io/apache/airflow:2.10.5-python3.11@sha256:b16e19f925ae0dcabaa2271b37212891ed68bf74e26c2db61f46dddd7d502937 0.0s done
+#6 DONE 0.0s
+
+#5 [airflow-scheduler internal] load build context
+#5 transferring context: 60B 0.0s done
+#5 DONE 0.3s
+
+#7 [airflow-webserver 2/3] COPY requirements.txt /requirements.txt
+#7 CACHED
+
+#8 [airflow-webserver 3/3] RUN pip install --no-cache-dir -r /requirements.txt
+#8 CACHED
+
+#7 [airflow-init 2/3] COPY requirements.txt /requirements.txt
+#7 CACHED
+
+#8 [airflow-scheduler 3/3] RUN pip install --no-cache-dir -r /requirements.txt
+#8 CACHED
+
+#9 [airflow-init] exporting to image
+#9 exporting layers 0.0s done
+#9 exporting manifest sha256:3ff815d38ed5edb1c651f98a6e042e97616de84e113739da24603fffeb8a85da
+#9 exporting manifest sha256:3ff815d38ed5edb1c651f98a6e042e97616de84e113739da24603fffeb8a85da 1.4s done
+#9 exporting config sha256:fa442aadaabd3275fd471133f332716266e124e14eca98aa2f175ef9833d96cd
+#9 exporting config sha256:fa442aadaabd3275fd471133f332716266e124e14eca98aa2f175ef9833d96cd 1.0s done
+#9 exporting attestation manifest sha256:7daed2b1ab669497876624c306144167cb07015b0a6f03412ea4d70854b46f9d
+#9 exporting attestation manifest sha256:7daed2b1ab669497876624c306144167cb07015b0a6f03412ea4d70854b46f9d 1.4s done
+#9 exporting manifest list sha256:264c8434c8f52065c34130d25d431fbcbe5c2b55b42ff0a8d1502111da55d3d7
+#9 exporting manifest list sha256:264c8434c8f52065c34130d25d431fbcbe5c2b55b42ff0a8d1502111da55d3d7 1.0s done
+#9 naming to docker.io/library/pipeline_monitoring_practicum-airflow-init:latest
+#9 naming to docker.io/library/pipeline_monitoring_practicum-airflow-init:latest 0.3s done
+#9 unpacking to docker.io/library/pipeline_monitoring_practicum-airflow-init:latest
+#9 ...
+
+#10 [airflow-scheduler] exporting to image
+#10 exporting layers 0.0s done
+#10 exporting manifest sha256:00b287bab49dd464bb6d058a72d9812a8d42cd4e76ba4edf7492e0f94e8ee31a 1.4s done
+#10 exporting config sha256:d5e06b972ba60200f57008b6866638723aeda68f2b03b36d4cfa2390038b71eb 1.1s done
+#10 exporting attestation manifest sha256:0d36d3bc4a63a3f96cf90c805de44236f7c1f1f5c39a6a052d19be82ac884598 1.4s done
+#10 exporting manifest list sha256:bb2699c0c6c45bedc207b109d37487e8af5c36cc3cab98259a37248516276153 1.0s done
+#10 naming to docker.io/library/pipeline_monitoring_practicum-airflow-scheduler:latest 0.3s done
+#10 unpacking to docker.io/library/pipeline_monitoring_practicum-airflow-scheduler:latest 0.7s done
+#10 DONE 6.2s
+
+#9 [airflow-init] exporting to image
+#9 unpacking to docker.io/library/pipeline_monitoring_practicum-airflow-init:latest 0.6s done
+#9 ...
+
+#11 [airflow-webserver] exporting to image
+#11 exporting layers 0.0s done
+#11 exporting manifest sha256:9f42b92b9634a57ade11f55d4da1440d238d127bd78221465fdcd598806eb6b5 1.4s done
+#11 exporting config sha256:520d67839b0e9d87627333d16ffe92a3aa08b1dda0d080ed95370252f7f5407f 1.0s done
+#11 exporting attestation manifest sha256:f6be279f8bd6910d0960d10395119fe9a68dac78a34ae2d497148d0445bc1259 1.3s done
+#11 exporting manifest list sha256:5c7f6a1c34bcc81af5179131a24289748f6d5db58eb265a566ddf8ff2feae205 1.1s done
+#11 naming to docker.io/library/pipeline_monitoring_practicum-airflow-webserver:latest 0.2s done
+#11 unpacking to docker.io/library/pipeline_monitoring_practicum-airflow-webserver:latest 0.6s done
+#11 DONE 6.0s
+
+#9 [airflow-init] exporting to image
+#9 DONE 6.1s
+
+#12 [airflow-scheduler] resolving provenance for metadata file
+#12 ...
+
+#13 [airflow-init] resolving provenance for metadata file
+#13 DONE 0.1s
+
+#12 [airflow-scheduler] resolving provenance for metadata file
+#12 DONE 0.1s
+
+#14 [airflow-webserver] resolving provenance for metadata file
+#14 DONE 0.0s
+ Image pipeline_monitoring_practicum-airflow-init Built 
+ Image pipeline_monitoring_practicum-airflow-scheduler Built 
+ Image pipeline_monitoring_practicum-airflow-webserver Built
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> docker run --rm apache/airflow:2.10.5-python3.11 bash -c "pip show requests"
+
+Name: requests
+Version: 2.32.3
+Summary: Python HTTP for Humans.
+Home-page: https://requests.readthedocs.io
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.org
+License: Apache-2.0
+Location: /home/airflow/.local/lib/python3.11/site-packages
+Requires: certifi, charset-normalizer, idna, urllib3
+Required-by: adal, apache-airflow, apache-airflow-providers-http, azure-core, azure-datalake-store, azure-kusto-data, connexion, docker, gcsfs, google-api-core, google-cloud-bigquery, google-cloud-storage, hvac, kubernetes, looker-sdk, msal, msrest, openlineage-python, opentelemetry-exporter-otlp-proto-http, redshift-connector, requests-oauthlib, requests-toolbelt, snowflake-connector-python

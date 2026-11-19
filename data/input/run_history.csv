@@ -1,0 +1,6 @@
+run_id,duration_seconds,status,data_ready_at,scheduled_ready_at
+1,420,success,08:07,08:00
+2,510,success,08:09,08:00
+3,980,failed,,08:00
+4,450,success,08:08,08:00
+5,610,success,08:11,08:00

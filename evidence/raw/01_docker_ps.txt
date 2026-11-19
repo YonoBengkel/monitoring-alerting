@@ -1,0 +1,2 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring> docker ps --format "table {{.Names}}\t{{.Ports}}"
+NAMES     PORTS

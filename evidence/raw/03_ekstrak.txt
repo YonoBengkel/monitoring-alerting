@@ -1,0 +1,22 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring> Expand-Archive -Path "Docs\Panduan\pipeline_monitoring_practicum.zip" -DestinationPath . -Force
+
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> New-Item -ItemType Directory -Force evidence | Out-Null
+
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Get-ChildItem -Force
+
+
+    Directory: D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum
+
+
+Mode                 LastWriteTime         Length Name                                                                                                                                                                                                    
+----                 -------------         ------ ----                                                                                                                                                                                                    
+d-----        11/19/2026   8:42 AM                dags                                                                                                                                                                                                    
+d-----        11/19/2026   8:42 AM                data                                                                                                                                                                                                    
+d-----        11/19/2026   8:42 AM                evidence                                                                                                                                                                                                
+d-----        11/19/2026   8:42 AM                scripts                                                                                                                                                                                                 
+-a----        11/15/2026   1:12 PM            116 .env.example                                                                                                                                                                                            
+-a----        11/15/2026   1:12 PM             61 .gitignore                                                                                                                                                                                              
+-a----        11/15/2026   1:12 PM           2359 docker-compose.yaml                                                                                                                                                                                     
+-a----        11/15/2026   1:12 PM            130 Dockerfile                                                                                                                                                                                              
+-a----        11/15/2026   1:12 PM            489 README.md                                                                                                                                                                                               
+-a----        11/15/2026   1:12 PM             17 requirements.txt

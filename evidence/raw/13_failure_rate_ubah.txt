@@ -1,0 +1,31 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Copy-Item data\input\run_history.csv data\input\run_history_asli.csv
+
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> (Get-Content data\input\run_history.csv) -replace '^2,510,success', '2,510,failed' | Set-Content data\input\run_history.csv -Encoding ascii
+
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Get-Content data\input\run_history.csv
+run_id,duration_seconds,status,data_ready_at,scheduled_ready_at
+1,420,success,08:07,08:00
+2,510,failed,08:09,08:00
+3,980,failed,,08:00
+4,450,success,08:08,08:00
+5,610,success,08:11,08:00
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> python scripts\analyze_run_history.py
+=== HISTORICAL PIPELINE HEALTH ===
+Total runs             : 5
+Failed runs            : 2
+Failure rate           : 40.00%
+Average successful duration: 493.3 seconds
+Average data latency   : 8.7 minutes
+Maximum data latency   : 11.0 minutes
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Copy-Item data\input\run_history_asli.csv data\input\run_history.csv -Force
+
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Remove-Item data\input\run_history_asli.csv
+
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> python scripts\analyze_run_history.py
+=== HISTORICAL PIPELINE HEALTH ===
+Total runs             : 5
+Failed runs            : 1
+Failure rate           : 20.00%
+Average successful duration: 497.5 seconds
+Average data latency   : 8.8 minutes
+Maximum data latency   : 11.0 minutes

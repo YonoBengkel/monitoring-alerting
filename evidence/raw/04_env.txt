@@ -1,0 +1,7 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Copy-Item .env.example .env
+
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Get-Content .env
+# Copy this file to .env. Keep real webhook URLs private.
+AIRFLOW_UID=50000
+SLACK_WEBHOOK_URL=
+DISCORD_WEBHOOK_URL=

@@ -1,0 +1,87 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> docker compose up airflow-init
+ Network pipeline_monitoring_practicum_default Creating 
+ Volume pipeline_monitoring_practicum_postgres-db-volume Creating 
+ Volume pipeline_monitoring_practicum_postgres-db-volume Creating 
+ Network pipeline_monitoring_practicum_default Creating 
+ Volume pipeline_monitoring_practicum_postgres-db-volume Created 
+ Volume pipeline_monitoring_practicum_postgres-db-volume Created 
+ Network pipeline_monitoring_practicum_default Created 
+ Network pipeline_monitoring_practicum_default Created 
+ Container pipeline_monitoring_practicum-postgres-1 Creating 
+ Container pipeline_monitoring_practicum-postgres-1 Created 
+ Container pipeline_monitoring_practicum-airflow-init-1 Creating 
+ Container pipeline_monitoring_practicum-airflow-init-1 Created 
+Attaching to airflow-init-1
+ Container pipeline_monitoring_practicum-postgres-1 Starting 
+ Container pipeline_monitoring_practicum-postgres-1 Started 
+ Container pipeline_monitoring_practicum-postgres-1 Waiting 
+ Container pipeline_monitoring_practicum-postgres-1 Healthy 
+ Container pipeline_monitoring_practicum-airflow-init-1 Starting 
+ Container pipeline_monitoring_practicum-airflow-init-1 Started 
+airflow-init-1  | DB: postgresql+psycopg2://airflow:***@postgres/airflow
+airflow-init-1  | Performing upgrade to the metadata database postgresql+psycopg2://airflow:***@postgres/airflow
+airflow-init-1  | [2026-11-19T01:43:04.216+0000] {migration.py:207} INFO - Context impl PostgresqlImpl.
+airflow-init-1  | [2026-11-19T01:43:04.218+0000] {migration.py:210} INFO - Will assume transactional DDL.
+airflow-init-1  | [2026-11-19T01:43:04.220+0000] {migration.py:207} INFO - Context impl PostgresqlImpl.
+airflow-init-1  | [2026-11-19T01:43:04.221+0000] {migration.py:210} INFO - Will assume transactional DDL.
+airflow-init-1  | INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+airflow-init-1  | INFO  [alembic.runtime.migration] Will assume transactional DDL.
+airflow-init-1  | INFO  [alembic.runtime.migration] Running stamp_revision  -> 5f2621c13b39
+airflow-init-1  | Database migrating done!
+airflow-init-1  | /home/airflow/.local/lib/python3.11/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+airflow-init-1  | [2026-11-19T01:43:09.586+0000] {override.py:1508} INFO - Inserted Role: Admin
+airflow-init-1  | [2026-11-19T01:43:09.598+0000] {override.py:965} WARNING - No user yet created, use flask fab command to do it.
+airflow-init-1  | [2026-11-19T01:43:09.683+0000] {override.py:1912} INFO - Created Permission View: can edit on Passwords
+airflow-init-1  | [2026-11-19T01:43:09.697+0000] {override.py:1963} INFO - Added Permission can edit on Passwords to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.710+0000] {override.py:1912} INFO - Created Permission View: can read on Passwords
+airflow-init-1  | [2026-11-19T01:43:09.717+0000] {override.py:1963} INFO - Added Permission can read on Passwords to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.733+0000] {override.py:1912} INFO - Created Permission View: can edit on My Password
+airflow-init-1  | [2026-11-19T01:43:09.738+0000] {override.py:1963} INFO - Added Permission can edit on My Password to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.745+0000] {override.py:1912} INFO - Created Permission View: can read on My Password
+airflow-init-1  | [2026-11-19T01:43:09.750+0000] {override.py:1963} INFO - Added Permission can read on My Password to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.762+0000] {override.py:1912} INFO - Created Permission View: can edit on My Profile
+airflow-init-1  | [2026-11-19T01:43:09.767+0000] {override.py:1963} INFO - Added Permission can edit on My Profile to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.774+0000] {override.py:1912} INFO - Created Permission View: can read on My Profile
+airflow-init-1  | [2026-11-19T01:43:09.779+0000] {override.py:1963} INFO - Added Permission can read on My Profile to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.811+0000] {override.py:1912} INFO - Created Permission View: can create on Users
+airflow-init-1  | [2026-11-19T01:43:09.817+0000] {override.py:1963} INFO - Added Permission can create on Users to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.824+0000] {override.py:1912} INFO - Created Permission View: can read on Users
+airflow-init-1  | [2026-11-19T01:43:09.829+0000] {override.py:1963} INFO - Added Permission can read on Users to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.836+0000] {override.py:1912} INFO - Created Permission View: can edit on Users
+airflow-init-1  | [2026-11-19T01:43:09.841+0000] {override.py:1963} INFO - Added Permission can edit on Users to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.850+0000] {override.py:1912} INFO - Created Permission View: can delete on Users
+airflow-init-1  | [2026-11-19T01:43:09.856+0000] {override.py:1963} INFO - Added Permission can delete on Users to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.875+0000] {override.py:1912} INFO - Created Permission View: menu access on List Users
+airflow-init-1  | [2026-11-19T01:43:09.883+0000] {override.py:1963} INFO - Added Permission menu access on List Users to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.897+0000] {override.py:1912} INFO - Created Permission View: menu access on Security
+airflow-init-1  | [2026-11-19T01:43:09.902+0000] {override.py:1963} INFO - Added Permission menu access on Security to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.927+0000] {override.py:1912} INFO - Created Permission View: can create on Roles
+airflow-init-1  | [2026-11-19T01:43:09.933+0000] {override.py:1963} INFO - Added Permission can create on Roles to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.940+0000] {override.py:1912} INFO - Created Permission View: can read on Roles
+airflow-init-1  | [2026-11-19T01:43:09.945+0000] {override.py:1963} INFO - Added Permission can read on Roles to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.952+0000] {override.py:1912} INFO - Created Permission View: can edit on Roles
+airflow-init-1  | [2026-11-19T01:43:09.957+0000] {override.py:1963} INFO - Added Permission can edit on Roles to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.964+0000] {override.py:1912} INFO - Created Permission View: can delete on Roles
+airflow-init-1  | [2026-11-19T01:43:09.969+0000] {override.py:1963} INFO - Added Permission can delete on Roles to role Admin
+airflow-init-1  | [2026-11-19T01:43:09.983+0000] {override.py:1912} INFO - Created Permission View: menu access on List Roles
+airflow-init-1  | [2026-11-19T01:43:09.988+0000] {override.py:1963} INFO - Added Permission menu access on List Roles to role Admin
+airflow-init-1  | [2026-11-19T01:43:10.008+0000] {override.py:1912} INFO - Created Permission View: can read on User Stats Chart
+airflow-init-1  | [2026-11-19T01:43:10.015+0000] {override.py:1963} INFO - Added Permission can read on User Stats Chart to role Admin
+airflow-init-1  | [2026-11-19T01:43:10.028+0000] {override.py:1912} INFO - Created Permission View: menu access on User's Statistics
+airflow-init-1  | [2026-11-19T01:43:10.033+0000] {override.py:1963} INFO - Added Permission menu access on User's Statistics to role Admin
+airflow-init-1  | [2026-11-19T01:43:10.061+0000] {override.py:1912} INFO - Created Permission View: can read on Permissions
+airflow-init-1  | [2026-11-19T01:43:10.068+0000] {override.py:1963} INFO - Added Permission can read on Permissions to role Admin
+airflow-init-1  | [2026-11-19T01:43:10.085+0000] {override.py:1912} INFO - Created Permission View: menu access on Actions
+airflow-init-1  | [2026-11-19T01:43:10.093+0000] {override.py:1963} INFO - Added Permission menu access on Actions to role Admin
+airflow-init-1  | [2026-11-19T01:43:10.126+0000] {override.py:1912} INFO - Created Permission View: can read on View Menus
+airflow-init-1  | [2026-11-19T01:43:10.133+0000] {override.py:1963} INFO - Added Permission can read on View Menus to role Admin
+airflow-init-1  | [2026-11-19T01:43:10.146+0000] {override.py:1912} INFO - Created Permission View: menu access on Resources
+airflow-init-1  | [2026-11-19T01:43:10.151+0000] {override.py:1963} INFO - Added Permission menu access on Resources to role Admin
+airflow-init-1  | [2026-11-19T01:43:10.177+0000] {override.py:1912} INFO - Created Permission View: can read on Permission Views
+airflow-init-1  | [2026-11-19T01:43:10.183+0000] {override.py:1963} INFO - Added Permission can read on Permission Views to role Admin
+airflow-init-1  | [2026-11-19T01:43:10.196+0000] {override.py:1912} INFO - Created Permission View: menu access on Permission Pairs
+airflow-init-1  | [2026-11-19T01:43:10.202+0000] {override.py:1963} INFO - Added Permission menu access on Permission Pairs to role Admin
+airflow-init-1  | [2026-11-19T01:43:11.654+0000] {override.py:1597} INFO - Added user airflow
+airflow-init-1  | User "airflow" created with role "Admin"
+
+[Kairflow-init-1 exited with code 0

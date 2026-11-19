@@ -1,0 +1,58 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> (Get-Content .env) -replace '(https://discord(app)?\.com/api/webhooks/).+', '$1<disembunyikan>'
+# Copy this file to .env. Keep real webhook URLs private.
+AIRFLOW_UID=50000
+SLACK_WEBHOOK_URL=
+DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/<disembunyikan>
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> docker compose down
+ Container pipeline_monitoring_practicum-airflow-webserver-1 Stopping 
+ Container pipeline_monitoring_practicum-airflow-scheduler-1 Stopping 
+ Container pipeline_monitoring_practicum-airflow-scheduler-1 Stopped 
+ Container pipeline_monitoring_practicum-airflow-scheduler-1 Removing 
+ Container pipeline_monitoring_practicum-airflow-webserver-1 Stopped 
+ Container pipeline_monitoring_practicum-airflow-webserver-1 Removing 
+ Container pipeline_monitoring_practicum-airflow-scheduler-1 Removed 
+ Container pipeline_monitoring_practicum-airflow-webserver-1 Removed 
+ Container pipeline_monitoring_practicum-airflow-init-1 Stopping 
+ Container pipeline_monitoring_practicum-airflow-init-1 Stopped 
+ Container pipeline_monitoring_practicum-airflow-init-1 Removing 
+ Container pipeline_monitoring_practicum-airflow-init-1 Removed 
+ Container pipeline_monitoring_practicum-postgres-1 Stopping 
+ Container pipeline_monitoring_practicum-postgres-1 Stopped 
+ Container pipeline_monitoring_practicum-postgres-1 Removing 
+ Container pipeline_monitoring_practicum-postgres-1 Removed 
+ Network pipeline_monitoring_practicum_default Removing 
+ Network pipeline_monitoring_practicum_default Removed
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> docker compose up -d
+ Network pipeline_monitoring_practicum_default Creating 
+ Network pipeline_monitoring_practicum_default Creating 
+ Network pipeline_monitoring_practicum_default Created 
+ Network pipeline_monitoring_practicum_default Created 
+ Container pipeline_monitoring_practicum-postgres-1 Creating 
+ Container pipeline_monitoring_practicum-postgres-1 Created 
+ Container pipeline_monitoring_practicum-airflow-init-1 Creating 
+ Container pipeline_monitoring_practicum-airflow-init-1 Created 
+ Container pipeline_monitoring_practicum-airflow-webserver-1 Creating 
+ Container pipeline_monitoring_practicum-airflow-scheduler-1 Creating 
+ Container pipeline_monitoring_practicum-airflow-scheduler-1 Created 
+ Container pipeline_monitoring_practicum-airflow-webserver-1 Created 
+ Container pipeline_monitoring_practicum-postgres-1 Starting 
+ Container pipeline_monitoring_practicum-postgres-1 Started 
+ Container pipeline_monitoring_practicum-postgres-1 Waiting 
+ Container pipeline_monitoring_practicum-postgres-1 Healthy 
+ Container pipeline_monitoring_practicum-airflow-init-1 Starting 
+ Container pipeline_monitoring_practicum-airflow-init-1 Started 
+ Container pipeline_monitoring_practicum-airflow-init-1 Waiting 
+ Container pipeline_monitoring_practicum-airflow-init-1 Waiting 
+ Container pipeline_monitoring_practicum-airflow-init-1 Exited 
+ Container pipeline_monitoring_practicum-airflow-scheduler-1 Starting 
+ Container pipeline_monitoring_practicum-airflow-init-1 Exited 
+ Container pipeline_monitoring_practicum-airflow-webserver-1 Starting 
+ Container pipeline_monitoring_practicum-airflow-scheduler-1 Started 
+ Container pipeline_monitoring_practicum-airflow-webserver-1 Started
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> docker compose ps
+NAME                                                IMAGE                                             COMMAND                  SERVICE             CREATED              STATUS                        PORTS
+pipeline_monitoring_practicum-airflow-scheduler-1   pipeline_monitoring_practicum-airflow-scheduler   "/usr/bin/dumb-init …"   airflow-scheduler   About a minute ago   Up About a minute             8080/tcp
+pipeline_monitoring_practicum-airflow-webserver-1   pipeline_monitoring_practicum-airflow-webserver   "/usr/bin/dumb-init …"   airflow-webserver   About a minute ago   Up About a minute (healthy)   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+pipeline_monitoring_practicum-postgres-1            postgres:13                                       "docker-entrypoint.s…"   postgres            About a minute ago   Up About a minute (healthy)   5432/tcp
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> docker compose exec airflow-scheduler python -c "import os; print('DISCORD_WEBHOOK_URL di container:', 'terisi' if os.getenv('DISCORD_WEBHOOK_URL') else 'kosong')"
+DISCORD_WEBHOOK_URL di container: terisi

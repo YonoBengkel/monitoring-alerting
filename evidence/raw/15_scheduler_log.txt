@@ -1,0 +1,4 @@
+PS D:\CODE\Data Processing Workflow\9. Monitoring\pipeline_monitoring_practicum> Select-String -Path logs\scheduler\*\etl_monitoring_demo.py.log -Pattern "DAG failure event"
+
+logs\scheduler\2026-11-19\etl_monitoring_demo.py.log:182:[2026-11-19T01:55:53.666+0000] {logging_mixin.py:190} INFO - [2026-11-19T01:55:53.666+0000] {notification_utils.py:59} ERROR - DAG failure event: dag_id=etl_monitoring_demo 
+run_id=manual__2026-11-19T01:55:18.708647+00:00
